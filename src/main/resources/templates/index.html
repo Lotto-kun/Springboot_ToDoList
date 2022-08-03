@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+</head>
+<body>
+    <h2>Всего дел (<span th:text="${toDosCount}">0</span>)</h2>
+    <br>
+    <div id="todo-list">
+        <div th:each="toDo : ${toDos}">
+            <span th:attr="data-id=${toDo.id}" th:text="${toDo.time}"></span>
+            <span th:attr="data-id=${toDo.id}" th:text="${toDo.activity}"></span>
+        </div>
+    </div>
+</body>
+</html>
